@@ -4,8 +4,10 @@ const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 const mainTitle = document.querySelector('h1');
 
-const setDate = '10 April 2024';
+const setDate = '1 Jan 2025';
 const countdownDate = new Date(setDate);
+
+console.log(countdownDate);
 
 function countdown() {
   const currentDate = new Date();
@@ -16,6 +18,10 @@ function countdown() {
   const hours = Math.floor(totalSeconds / 3600) % 24;
   const minutes = Math.floor(totalSeconds / 60) % 60;
   const seconds = Math.floor(totalSeconds) % 60;
+
+  function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+  }
 
   // Update the display
   daysEl.innerHTML = formatTime(days);
@@ -28,10 +34,6 @@ const formattedDate = `${countdownDate.toLocaleString('default', {
   month: 'long',
 })} ${countdownDate.getDate()}, ${countdownDate.getFullYear()}`;
 mainTitle.innerText = `Countdown to ${formattedDate}`;
-
-function formatTime(time) {
-  return time < 10 ? `0${time}` : time;
-}
 
 // Initial call so it doesn't start at 00
 countdown();
