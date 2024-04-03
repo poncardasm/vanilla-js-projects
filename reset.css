@@ -1,0 +1,53 @@
+/* Simple CSS Reset */
+
+/* 1. Set consistent box-sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Handle basic margin and padding resets */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Basic list style reset */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Remove default outline on focused elements */
+button,
+input,
+textarea,
+select {
+  outline: none;
+}
+
+/* 5. Remove default underline for links */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color from parent */
+}
+
+body {
+  font-family: sans-serif;
+}
