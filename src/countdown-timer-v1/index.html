@@ -2,55 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="../reset.css" />
-    <link
-      rel="stylesheet"
-      href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
     <title>Countdown Timer v1</title>
   </head>
   <body>
-    <div id="main">
-      <h1>Countdown Timer v1</h1>
-      <div class="countdown">
-        <div class="time-section">
-          <div
-            class="time"
-            id="days">
-            00
-          </div>
-          <small>Days</small>
-        </div>
+    <div
+      id="main"
+      class="justify-star flex h-screen flex-col items-center justify-center"
+    >
+      <div
+        class="border-1 container w-auto rounded-lg border-slate-200 bg-slate-100 p-10"
+      >
+        <h1 class="mb-6 text-xl font-medium">
+          Countdown Timer: January 1, 2025
+        </h1>
 
-        <div class="time-section">
-          <div
-            class="time"
-            id="hours">
-            00
+        <div class="countdown flex justify-center gap-6">
+          <div class="time-section flex flex-col items-center">
+            <div class="time text-3xl" id="days">270</div>
+            <small>Days</small>
           </div>
-          <small>Hours</small>
-        </div>
 
-        <div class="time-section">
-          <div
-            class="time"
-            id="minutes">
-            00
+          <div class="time-section flex flex-col items-center">
+            <div class="time text-3xl" id="hours">11</div>
+            <small>Hours</small>
           </div>
-          <small>Minutes</small>
-        </div>
 
-        <div class="time-section">
-          <div
-            class="time"
-            id="seconds">
-            00
+          <div class="time-section flex flex-col items-center">
+            <div class="time text-3xl" id="minutes">07</div>
+            <small>Minutes</small>
           </div>
-          <small>Seconds</small>
+
+          <div class="time-section flex flex-col items-center">
+            <div class="time text-3xl" id="seconds">48</div>
+            <small>Seconds</small>
+          </div>
         </div>
       </div>
     </div>

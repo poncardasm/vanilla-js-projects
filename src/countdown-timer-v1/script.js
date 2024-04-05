@@ -7,8 +7,6 @@ const mainTitle = document.querySelector('h1');
 const setDate = '1 Jan 2025';
 const countdownDate = new Date(setDate);
 
-console.log(countdownDate);
-
 function countdown() {
   const currentDate = new Date();
 
