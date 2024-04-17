@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch</title>
+    <title>Pomodoro Timer</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./style.css" />
@@ -14,12 +15,10 @@
   </head>
   <body>
 		<div class="container">
-			<h1>Stopwatch Timer</h1>
-			<div class="timer-display">00:00:00</div>
-			<div class="controls">
-				<button id="start-btn">Start</button>
-				<button id="stop-btn" disabled>Stop</button>
-				<button id="reset-btn" disabled>Reset</button>
+			<div class="section-container">
+				<button id="focus" class="btn btn-timer btn-focus">Focus</button>
+				<button id="shortbreak" class="btn btn-shortbreak">Short Break</button>
+				<button id="longbreak" class="btn btn-longbreak">Long Break</button>
 			</div>
 		</div>
 	</body>
