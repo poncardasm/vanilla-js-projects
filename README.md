@@ -1,6 +1,6 @@
 # Vanilla JS Projects
 
-This repository is a collection of various projects built using plain JavaScript (without any frameworks or libraries). These projects were created as part of my learning journey and serve as practice exercises to solidify my understanding of vanilla JavaScript concepts and techniques.
+This repository is a collection of various projects I built using plain JavaScript (without any frameworks or libraries). These projects were created as part of my learning journey and serve as practice exercises to solidify my understanding of vanilla JavaScript concepts and techniques.
 
 ## Project List
 
