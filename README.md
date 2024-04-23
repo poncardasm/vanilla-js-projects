@@ -9,8 +9,13 @@ This repository is a collection of various projects I built using plain JavaScri
    - Simple new year countdown timer.
    - [Live Demo](#)
 
-1. **[Countdown with date picker](https://github.com/poncardasm/vanilla-js-projects/tree/main/countdown-date-picker)**
+2. **[Countdown with date picker](https://github.com/poncardasm/vanilla-js-projects/tree/main/countdown-date-picker)**
+
    - Countdown timer where user can select date and time.
+   - [Live Demo](#)
+
+3. **[Stopwatch](https://github.com/poncardasm/vanilla-js-projects/tree/main/stopwatch)**
+   - Simple stop watch timer with Start, Stop and Reset buttons.
    - [Live Demo](#)
 
 ## Getting Started
