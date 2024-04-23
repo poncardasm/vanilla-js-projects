@@ -23,6 +23,16 @@ function stopTimer() {
   btnStop.disabled = true;
 }
 
+function resetTimer() {
+  clearInterval(timeInterval);
+  time = 0;
+  updateTimerDisplay();
+
+  btnStart.disabled = false;
+  btnStop.disabled = true;
+  btnReset.disabled = true;
+}
+
 function updateTimerDisplay() {
   const hours = Math.floor(time / 3600);
   const minutes = Math.floor((time % 3600) / 60);
