@@ -17,6 +17,12 @@ function startTimer() {
   btnReset.disabled = false;
 }
 
+function stopTimer() {
+  clearInterval(timeInterval);
+  btnStart.disabled = false;
+  btnStop.disabled = true;
+}
+
 function updateTimerDisplay() {
   const hours = Math.floor(time / 3600);
   const minutes = Math.floor((time % 3600) / 60);
