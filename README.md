@@ -16,7 +16,7 @@ This repository is a collection of various projects I built using plain JavaScri
 
 3. **[Stopwatch](https://github.com/poncardasm/vanilla-js-projects/tree/main/stopwatch-timer)**
    - Simple stop watch timer with Start, Stop and Reset buttons.
-   - [Live Demo](https://vanilla-js-projects-stopwatch-60efnobn6-poncardasm.vercel.app/)
+   - [Live Demo](https://vanilla-js-projects-stopwatch.vercel.app/)
 
 ## Getting Started
 
