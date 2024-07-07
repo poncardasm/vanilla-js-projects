@@ -18,6 +18,7 @@ function addItem(e) {
   addToList.appendChild(document.createTextNode(newItem));
 
   const button = createButton('remove-item btn-link text-red')
+  
   addToList.appendChild(button);
   itemList.appendChild(addToList);
 
@@ -30,6 +31,7 @@ function createButton(btnClass) {
 
   const icon = createIcon('fa-solid fa-xmark');
   button.appendChild(icon);
+  
   return button;
 }
 
@@ -39,5 +41,12 @@ function createIcon(iconClass) {
   return icon;
 }
 
+function removeItem(e) {
+  if (e.target.parentElement.classList.contains('remove-item')) {
+    e.target.parentElement.parentElement.remove();
+  }
+}
+
 // Event listeners
 itemForm.addEventListener('submit', addItem);
+itemList.addEventListener('click', removeItem);
