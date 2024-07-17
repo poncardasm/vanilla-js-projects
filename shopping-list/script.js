@@ -111,6 +111,9 @@ function clearItems() {
   while (itemList.firstChild) {
     itemList.removeChild(itemList.firstChild);
   }
+
+  // Clear items from local storage
+  localStorage.removeItem('items');
   checkUI();
 }
 
