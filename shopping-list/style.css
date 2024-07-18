@@ -34,6 +34,10 @@ header h1 {
   margin-left: 0.625rem;
 }
 
+.edit-mode {
+  color: #ccc;
+}
+
 /* Form & Input */
 .form-input {
   width: 100%;
@@ -115,6 +119,7 @@ header h1 {
   padding: 0.625rem 0.9375rem;
   margin: 0 0.3125rem 1.25rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
 @media (max-width: 31.25rem) {
