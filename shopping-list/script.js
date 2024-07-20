@@ -5,6 +5,7 @@ const clearBtn = document.getElementById('clear');
 const itemFilter = document.getElementById('filter');
 const formBtn = itemForm.querySelector('button');
 let isEditMode = false;
+let currentItem = null;
 
 function displayItems() {
   const itemsFromStorage = getItemsFromStorage();
@@ -22,13 +23,16 @@ function onAddItemSubmit(e) {
     alert('Please add an item');
     return;
   }
-  addItemToDOM(newItem);
 
-  addItemToStorage(newItem);
+  if (isEditMode) {
+    updateItem(newItem);
+  } else {
+    addItemToDOM(newItem);
+    addItemToStorage(newItem);
+  }
 
   checkUI();
-
-  itemInput.value = '';
+  resetForm();
 }
 
 function addItemToDOM(item) {
@@ -69,6 +73,25 @@ function addItemToStorage(item) {
   localStorage.setItem('items', JSON.stringify(itemsFromStorage));
 }
 
+function updateItem(newItem) {
+  const itemsFromStorage = getItemsFromStorage();
+  const index = itemsFromStorage.indexOf(currentItem);
+  itemsFromStorage[index] = newItem;
+
+  // Update local storage
+  localStorage.setItem('items', JSON.stringify(itemsFromStorage));
+
+  // Update DOM
+  itemList.querySelectorAll('li').forEach((item) => {
+    if (item.classList.contains('edit-mode')) {
+      item.firstChild.textContent = newItem;
+      item.classList.remove('edit-mode');
+    }
+  });
+
+  isEditMode = false;
+}
+
 function getItemsFromStorage() {
   let itemsFromStorage;
 
@@ -91,6 +114,7 @@ function onClickItem(e) {
 
 function setItemToEdit(item) {
   isEditMode = true;
+  currentItem = item.textContent;
 
   itemList
     .querySelectorAll('li')
@@ -151,7 +175,6 @@ function filterItems(e) {
 
 function checkUI() {
   const items = itemList.querySelectorAll('li');
-  console.log(items);
   if (items.length === 0) {
     clearBtn.style.display = 'none';
     itemFilter.style.display = 'none';
@@ -159,6 +182,14 @@ function checkUI() {
     clearBtn.style.display = 'block';
     itemFilter.style.display = 'block';
   }
+}
+
+function resetForm() {
+  isEditMode = false;
+  currentItem = null;
+  formBtn.innerHTML = '<i class="fa-solid fa-plus"></i> Add Item';
+  formBtn.style.backgroundColor = '#333';
+  itemInput.value = '';
 }
 
 // Initialize app
